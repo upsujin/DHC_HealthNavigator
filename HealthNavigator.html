@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthNavigator</title>
+    <link rel="stylesheet" href="css/HN.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="HealthNavigator.html">
+                    <img src="image/logo_full name.png" alt="HealthNavigator">
+                </a>
+            </div>
+            
+            <div class="auth-links">
+                <a href="#">로그인</a> |
+                <a href="#">회원가입</a> |
+                <a href="#">LANGUAGE</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="mecidal_information.html">
+                <div class="dropdown-menu">의료정보</div></a>
+                <div class="dropdown-content">
+                    <a href="mecidal_information.html">증상 별 진료과 찾기</a>
+                    <a href="medical_knowledge.html">잘못된 의학 지식 바로잡기</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="hospital_information.html">
+                <div class="dropdown-menu">병원 정보</div></a>
+                <div class="dropdown-content">
+                    <a href="hospital_information.html">내 주변 병원 찾기</a>
+                    <a href="hospital_disease.html">질병 별 전문 분야 병원</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="community.html">
+                <div class="dropdown-menu">community</div></a>
+                <div class="dropdown-content">
+                    <a href="community.html">건강 소통광장</a>
+                    <a href="community_Q.html">의료진과의 Q&A</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="https://www.amc.seoul.kr/asan/file/imageView.do?fileId=F000000624435_FifwSX" alt="First Slide">
+                 </div>
+            </div>
+            <div class="carousel-indicators">
+                <input type="radio" name="carousel" id="slide1" checked>
+                <label for="slide1" class="indicator"></label>
+                <input type="radio" name="carousel" id="slide2">
+                <label for="slide2" class="indicator"></label>
+                <input type="radio" name="carousel" id="slide3">
+                <label for="slide3" class="indicator"></label>
+            </div>
+        </div>
+        <div class="info-boxes">
+            <div class="info-box">
+              <h2>의료 정보 소식</h2>
+                <img src="image/medical_information.png" alt="의료정보">
+            </div>
+            <div class="info-box">
+              <h2>의료 정보 카드뉴스</h2>
+              <div class="card-carousel">
+                <a href="https://www.weknew.com/card/card_view.php?no=MxfBBhvVFtRZTbo6Bdq0LA%3D%3D">
+                <img src="https://www.weknew.com/card/card_img.php?host=202401&img=20240109162745633_m.jpg" alt="의료정보"></a>
+                <a href="https://www.weknew.com/card/card_view.php?no=g1dHG6kDqrZxOuu2GUAL%2BQ%3D%3D">
+                <img src="https://www.weknew.com/card/card_img.php?host=202212&img=20221216180935934_m.jpg" alt="의료정보"></a><!-- 의료 정보 카드뉴스 항목들 -->
+              </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

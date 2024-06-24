@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    border-bottom: 1px solid #ccc;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 65px;
+    margin-right: 20px;
+}
+
+.auth-links a {
+    text-decoration: none;
+    color: #000;
+    margin-left: auto;
+}
+
+nav {
+    background-color: #ffffff;
+    border-bottom:1px solid #ccc;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    margin: 0;
+    padding: 0px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.dropdown {position: relative;}
+    
+    .dropdown-menu { color: black;
+                    padding: 20px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    cursor: pointer;}
+    
+    .dropdown-content {display: none;
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50%, 0%);
+                        background-color: #f9f9f9;
+                        min-width: 300px;
+                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                        z-index: 10;}
+
+    .dropdown-content a { color: rgb(0, 0, 0);
+                        padding: 20px 20px;
+                        text-decoration: none;
+                        display: block;
+                        text-align: center;}
+
+    .dropdown:hover .dropdown-content {display: block;}
+                            
+    .dropdown-content a:hover {background-color: #f1f1f1}
+                            
+    .dropdown-menu:hover:not(.home) {background-color: rgb(236, 236, 236);
+                                    color: rgb(0, 0, 0);}
+                                    
+main {
+    padding: 20px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    height: 200px;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+.carousel-item {
+    display: flex;
+    text-align: center;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 1480px;
+    height: 300px;
+    transform: translateY(-0%);
+}
+
+.carousel-controls {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-controls span {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.carousel-indicators input {
+    display: none;
+}
+
+.carousel-indicators .indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicators input:checked + .indicator {
+    background-color: rgb(255, 138, 42);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .info-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px; /* 상단 이미지와의 거리 */
+    margin-left: 60px; /* 원하는 만큼 좌측으로 이동할 값 */
+    margin-right: 90px;
+  }
+  
+  .info-box {
+    width: 300px; /* 박스의 너비 */
+    height: 400px; /* 박스의 높이 */
+    width: 45%; /* 각 박스의 너비 */
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid #ccc;
+  }
+  
+  .info-box img {
+    max-width: 100%; /* 이미지의 최대 너비를 박스의 너비에 맞게 설정 */
+    max-height: 90%; /* 이미지의 최대 높이를 박스의 높이에 맞게 설정 */
+    width: auto; /* 이미지의 너비를 자동으로 조정하여 비율 유지 */
+    height: auto; /* 이미지의 높이를 자동으로 조정하여 비율 유지 */
+    display: block; /* 인라인 요소로 인식되지 않도록 블록 요소로 설정 */
+  } 
+
+  .news-carousel,
+  .card-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  .card-carousel img {
+    max-width: 100%; /* 이미지의 최대 너비 설정 */
+    height: auto; /* 이미지의 높이를 자동으로 조정 */
+    display: block; /* 인라인 요소로 인식되지 않도록 블록 요소로 설정 */
+    margin-top: 10px; /* 이미지 위쪽 여백 설정 */
+    width: 90%;
+    margin-left: 15px;
+    margin-right: 15px;
+}

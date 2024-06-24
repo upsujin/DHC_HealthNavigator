@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthNavigator</title>
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=pg10f053a0"></script>
+    <link rel="stylesheet" href="css/hospital_information.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="HealthNavigator.html">
+                    <img src="image/logo_full name.png" alt="HealthNavigator">
+                </a>
+            </div>
+            
+            <div class="auth-links">
+                <a href="#">로그인</a> |
+                <a href="#">회원가입</a> |
+                <a href="#">LANGUAGE</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="mecidal_information.html">
+                <div class="dropdown-menu">의료정보</div></a>
+                <div class="dropdown-content">
+                    <a href="mecidal_information.html">증상 별 진료과 찾기</a>
+                    <a href="medical_knowledge.html">잘못된 의학 지식 바로잡기</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="hospital_information.html">
+                <div class="dropdown-menu">병원 정보</div></a>
+                <div class="dropdown-content">
+                    <a href="hospital_information.html">내 주변 병원 찾기</a>
+                    <a href="hospital_disease.html">질병 별 전문 분야 병원</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="community.html">
+                <div class="dropdown-menu">community</div></a>
+                <div class="dropdown-content">
+                    <a href="community.html">건강 소통광장</a>
+                    <a href="community_Q.html">의료진과의 Q&A</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="additional-options">
+            <ul class="options-list">
+                <li><a href="hospital_information.html">내 주변 병원 찾기</a>
+                <li><a href="hospital_disease.html">질병 별 전문 분야 병원</a>
+            </ul>
+        </section>
+        <div class="dropdown-container">
+            <div class="dropdown">
+                <select id="province" onchange="loadCities()">
+                    <option value="">시/도 선택</option>
+                        <option value="서울">서울특별시</option>
+                        <option value="부산">부산광역시</option>
+                        <option value="대구">대구광역시</option>
+                        <option value="인천">인천광역시</option>
+                        <option value="광주">광주광역시</option>
+                        <option value="대전">대전광역시</option>
+                        <option value="울산">울산광역시</option>
+                        <option value="세종">세종특별자치시</option>
+                        <option value="경기">경기도</option>
+                        <option value="강원">강원도</option>
+                        <option value="충북">충청북도</option>
+                        <option value="충남">충청남도</option>
+                        <option value="전북">전라북도</option>
+                        <option value="전남">전라남도</option>
+                        <option value="경북">경상북도</option>
+                        <option value="경남">경상남도</option>
+                        <option value="제주">제주특별자치도</option>
+                </select>
+                
+                <select id="city" onchange="loadTownships()">
+                    <option value="">시/군/구</option>
+                </select>
+                
+                <select id="township">
+                    <option value="">읍/면/동</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button onclick="confirmSelection()">확인</button>
+                <button onclick="cancelSelection()">취소</button>
+            </div>
+        </div>
+        <div id="map" style="height: 400px; margin: 20px 0;"></div> 
+        <div id="hospital-list" class="hospital-list"></div>
+        <script src="js/hospital_information.js"></script>
+    </main>
+</body>
+</html>

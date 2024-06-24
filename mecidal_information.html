@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medical_information</title>
+    <link rel="stylesheet" href="css/medical_information.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="HealthNavigator.html">
+                    <img src="image/logo_full name.png" alt="HealthNavigator">
+                </a>
+            </div>            
+            <div class="auth-links">
+                <a href="#">로그인</a> |
+                <a href="#">회원가입</a> |
+                <a href="#">LANGUAGE</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="mecidal_information.html">
+                <div class="dropdown-menu">의료정보</div></a>
+                <div class="dropdown-content">
+                    <a href="mecidal_information.html">증상 별 진료과 찾기</a>
+                    <a href="medical_knowledge.html">잘못된 의학 지식 바로잡기</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="hospital_information.html">
+                <div class="dropdown-menu">병원 정보</div></a>
+                <div class="dropdown-content">
+                    <a href="hospital_information.html">내 주변 병원 찾기</a>
+                    <a href="hospital_disease.html">질병 별 전문 분야 병원</a>
+                    <a href="hospital_all.html">우리나라의 모든 병원</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="community.html">
+                <div class="dropdown-menu">community</div></a>
+                <div class="dropdown-content">
+                    <a href="community.html">건강 소통광장</a>
+                    <a href="community_Q.html">의료진과의 Q&A</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="additional-options">
+            <ul class="options-list">
+                <li><a href="mecidal_information.html">증상별 진료과 찾기</a></li>
+                <li><a href="medical_knowledge.html">잘못된 의학 지식 바로잡기</a></li>
+            </ul>
+        </section>
+        <form id="searchFrm">
+            <div class="container">
+                <div class="symptom-areas">
+                    <h2>증상 부위</h2>
+                    <ul>
+                        <li><input type="checkbox" id="head" name="symptomArea" value="head"> <label for="head">머리</label></li>
+                        <li><input type="checkbox" id="neck" name="symptomArea" value="neck"> <label for="neck">목</label></li>
+                        <li><input type="checkbox" id="chest" name="symptomArea" value="chest"> <label for="chest">가슴</label></li>
+                        <li><input type="checkbox" id="abdomen" name="symptomArea" value="abdomen"> <label for="abdomen">배</label></li>
+                        <li><input type="checkbox" id="eye" name="symptomArea" value="eye"> <label for="eye">눈</label></li>
+                        <li><input type="checkbox" id="ear" name="symptomArea" value="ear"> <label for="ear">귀</label></li>
+                        <li><input type="checkbox" id="nose" name="symptomArea" value="nose"> <label for="nose">코</label></li>
+                        <li><input type="checkbox" id="skin" name="symptomArea" value="skin"> <label for="skin">피부</label></li>
+                    </ul>
+                </div>
+                <div class="detail-symptoms">
+                    <h3>자세한 증상을 선택하세요</h3>
+                    <div data-area="head">
+                        <label><input type="checkbox" name="detailedSymptom" value="건망증" data-area="head">건망증 </label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="편두통" data-area="head">편두통 </label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="언어장애" data-area="head">언어장애 </label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="두통" data-area="head">두통 </label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="경련" data-area="head">경련 </label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="고열" data-area="head">열 </label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="어지러움" data-area="head">어지러움 </label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="지남력 장애" data-area="head">지남력 장애 </label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="구토" data-area="head">구토 </label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="불안" data-area="head">불안 </label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="졸림" data-area="head">졸림 </label>
+                    </div>
+                    <div data-area="neck">
+                        <label><input type="checkbox" name="detailedSymptom" value="sharpPain" data-area="neck"> 찌르는 듯한 통증 (목)</label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="seizures" data-area="neck"> 경련 (목)</label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="stabbingPain" data-area="neck"> 쑤시는 듯한 통증 (목)</label>
+                    </div>
+                    <div data-area="chest">
+                        <label><input type="checkbox" name="detailedSymptom" value="sharpPain" data-area="chest"> 찌르는 듯한 통증 (가슴)</label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="seizures" data-area="chest"> 경련 (목)</label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="stabbingPain" data-area="chest"> 쑤시는 듯한 통증 (목)</label>
+                    </div>
+                    <div data-area="abdomen">
+                        <label><input type="checkbox" name="detailedSymptom" value="sharpPain" data-area="abdomen"> 찌르는 듯한 통증 (복부(배))</label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="seizures" data-area="abdomen"> 경련 (목)</label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="stabbingPain" data-area="abdomen"> 쑤시는 듯한 통증 (목)</label>
+                    </div>
+                    <div data-area="eye">
+                        <label><input type="checkbox" name="detailedSymptom" value="sharpPain" data-area="eye"> 찌르는 듯한 통증 (눈)</label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="seizures" data-area="eye"> 가려움(눈)</label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="stabbingPain" data-area="eye"> 쑤시는 듯한 통증 (눈)</label>
+                    </div>
+                    
+                    <div data-area="ear">
+                        <label><input type="checkbox" name="detailedSymptom" value="sharpPain" data-area="ear"> 찌르는 듯한 통증 (귀)</label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="seizures" data-area="ear"> 경련 (목)</label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="stabbingPain" data-area="ear"> 쑤시는 듯한 통증 (목)</label>
+                    </div>
+                    
+                    <div data-area="nose">
+                        <label><input type="checkbox" name="detailedSymptom" value="sharpPain" data-area="nose"> 찌르는 듯한 통증 (코)</label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="seizures" data-area="nose"> 경련 (목)</label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="stabbingPain" data-area="nose"> 쑤시는 듯한 통증 (목)</label>
+                    </div>
+                    <div data-area="skin">
+                        <label><input type="checkbox" name="detailedSymptom" value="sharpPain" data-area="skin"> 찌르는 듯한 통증 (피부)</label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="seizures" data-area="skin"> 경련 (목)</label><br>
+                        <label><input type="checkbox" name="detailedSymptom" value="stabbingPain" data-area="skin"> 쑤시는 듯한 통증 (목)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="searchButton">검색</button>
+                <button id="resetButton">새로고침</button>
+            </div>
+            <div class="recommendations">
+                <div id="recommendationContent"></div>
+            </div>
+        </form>
+        <script src="js/medical_head.js"></script>
+        <script src="js/medical_information.js"></script>
+        
+</body>
+</html>

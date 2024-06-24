@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthNavigator</title>
+    <link rel="stylesheet" href="css/community_Q&A.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="HealthNavigator.html">
+                    <img src="image/logo_full name.png" alt="HealthNavigator">
+                </a>
+            </div>
+            
+            <div class="auth-links">
+                <a href="#">로그인</a> |
+                <a href="#">회원가입</a> |
+                <a href="#">LANGUAGE</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="mecidal_information.html">
+                <div class="dropdown-menu">의료정보</div></a>
+                <div class="dropdown-content">
+                    <a href="mecidal_information.html">증상 별 진료과 찾기</a>
+                    <a href="medical_knowledge.html">잘못된 의학 지식 바로잡기</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="hospital_information.html">
+                <div class="dropdown-menu">병원 정보</div></a>
+                <div class="dropdown-content">
+                    <a href="hospital_information.html">내 주변 병원 찾기</a>
+                    <a href="hospital_disease.html">질병 별 전문 분야 병원</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="community.html">
+                <div class="dropdown-menu">community</div></a>
+                <div class="dropdown-content">
+                    <a href="community.html">건강 소통광장</a>
+                    <a href="community_Q.html">의료진과의 Q&A</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="additional-options">
+            <ul class="options-list">
+                <li><a href="community.html">건강 소통광장</a></li>
+                <li><a href="community_Q.html">의료진과의 Q&A</a></li>
+            </ul>
+        </section>
+        <!-- Q&A Section -->
+        <section class="qa-section">
+            <h2>의료진과의 Q&A</h2>
+            <div class="qa-list">
+                <!-- Q&A items will go here -->
+                <div class="qa-item" id="qa1">
+                    <a href="Q1.html" onclick="incrementViews('qa1')">Q. 왼쪽으로 음식 씹으면 귀 뒤쪽이 아파요</a>
+                    <p>조회수 <span class="views"></span> | 답변수 <span class="answers"></span></p>
+                </div>
+                <div class="qa-item" id="qa2">
+                    <a href="#" onclick="incrementViews('qa2')">Q&A 제목 2</a>
+                    <p>조회수 <span class="views">39</span> | 답변수 <span class="answers">10</span></p>
+                </div>
+                <div class="qa-item" id="qa3">
+                    <a href="#" onclick="incrementViews('qa3')">Q&A 제목 3</a>
+                    <p>조회수 <span class="views">101</span> | 답변수 <span class="answers">13</span></p>
+                </div>
+                <div class="qa-item" id="qa4">
+                    <a href="#" onclick="incrementViews('qa4')">Q&A 제목 4</a>
+                    <p>조회수 <span class="views">39</span> | 답변수 <span class="answers">10</span></p>
+                </div>
+                <!-- 추가 Q&A 항목들 -->
+            </div>
+        </section>
+    </main>
+    <script src="js/community_Q&A.js"></script>
+</body>
+</html>

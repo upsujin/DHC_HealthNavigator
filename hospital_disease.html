@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthNavigator</title>
+    <link rel="stylesheet" href="css/hospital_disease.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="HealthNavigator.html">
+                    <img src="image/logo_full name.png" alt="HealthNavigator">
+                </a>
+            </div>
+            
+            <div class="auth-links">
+                <a href="#">로그인</a> |
+                <a href="#">회원가입</a> |
+                <a href="#">LANGUAGE</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="mecidal_information.html">
+                <div class="dropdown-menu">의료정보</div></a>
+                <div class="dropdown-content">
+                    <a href="mecidal_information.html">증상 별 진료과 찾기</a>
+                    <a href="medical_knowledge.html">잘못된 의학 지식 바로잡기</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="hospital_information.html">
+                <div class="dropdown-menu">병원 정보</div></a>
+                <div class="dropdown-content">
+                    <a href="hospital_information.html">내 주변 병원 찾기</a>
+                    <a href="hospital_disease.html">질병 별 전문 분야 병원</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="community.html">
+                <div class="dropdown-menu">community</div></a>
+                <div class="dropdown-content">
+                    <a href="community.html">건강 소통광장</a>
+                    <a href="community_Q.html">의료진과의 Q&A</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="additional-options">
+            <ul class="options-list">
+                <li><a href="hospital_information.html">내 주변 병원 찾기</a>
+                <li><a href="hospital_disease.html">질병 별 전문 분야 병원</a>
+            </ul>
+        </section>
+        <form id="searchFrm">
+            <div class="container">
+                <div class="symptom-areas">
+                    <h2>전문병원 유형 선택</h2>
+                    <ul>
+                        <li><input type="checkbox" id="관절" name="symptomArea" value="관절"> <label for="관절">관절</label></li>
+                        <li><input type="checkbox" id="뇌혈관" name="symptomArea" value="뇌혈관"> <label for="뇌혈관">뇌혈관</label></li>
+                        <li><input type="checkbox" id="대장항문" name="symptomArea" value="대장항문"> <label for="대장항문">대장항문</label></li>
+                        <li><input type="checkbox" id="수지접합" name="symptomArea" value="수지접합"> <label for="수지접합">수지접합</label></li>
+                        <li><input type="checkbox" id="심장" name="symptomArea" value="심장"> <label for="심장">심장</label></li>
+                        <li><input type="checkbox" id="알코올" name="symptomArea" value="알코올"> <label for="알코올">알코올</label></li>
+                        <li><input type="checkbox" id="유방" name="symptomArea" value="유방"> <label for="유방">유방</label></li>
+                        <li><input type="checkbox" id="척추" name="symptomArea" value="척추"> <label for="척추">척추</label></li>
+                        <li><input type="checkbox" id="화상" name="symptomArea" value="화상"> <label for="화상">화상</label></li>
+                        <li><input type="checkbox" id="산부인과" name="symptomArea" value="산부인과"> <label for="산부인과">산부인과</label></li>
+                        <li><input type="checkbox" id="소아청소년과" name="symptomArea" value="소아청소년과"> <label for="소아청소년과">소아청소년과</label></li>
+                        <li><input type="checkbox" id="안과" name="symptomArea" value="안과"> <label for="안과">안과</label></li>
+                        <li><input type="checkbox" id="외과" name="symptomArea" value="외과"> <label for="외과">외과</label></li>
+                        <li><input type="checkbox" id="이비인후과" name="symptomArea" value="이비인후과"> <label for="이비인후과">이비인후과</label></li>
+                        <li><input type="checkbox" id="신경과" name="symptomArea" value="신경과"> <label for="신경과">신경과</label></li>
+                        <li><input type="checkbox" id="주산기(모자)" name="symptomArea" value="주산기(모자)"> <label for="주산기(모자)">주산기(모자)</label></li>
+                        <li><input type="checkbox" id="한방중풍질환" name="symptomArea" value="한방중풍질환"> <label for="한방중풍질환">한방중풍질환</label></li>
+                        <li><input type="checkbox" id="한방척추질환" name="symptomArea" value="한방척추질환"> <label for="한방척추질환">한방척추질환</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="confirmSelection()">확인</button>
+                <button type="button" onclick="cancelSelection()">취소</button>
+            </div>
+        </div>
+        <div id="hospital-list" class="hospital-list"></div>
+        <script src="js/hospital_disease.js"></script>
+    </main>
+</body>
+</html>
